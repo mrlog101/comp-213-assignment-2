@@ -13,11 +13,13 @@ public class ClientInstance {
     private BufferedReader inputBuffer;
 
     public ClientInstance() throws IOException {
+
+
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the address of the server you wish to connect to:");
         serverAddress = scanner.nextLine();
         connect();
-        System.out.println(inputBuffer.readLine());
         String userInput = scanner.nextLine();
         while(!userInput.equals(null)){
             output.println(userInput);
